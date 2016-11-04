@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\NugetPackages\MicroBuild.Core.0.2.0\build\MicroBuild.Core.props" Condition="Exists('..\NugetPackages\MicroBuild.Core.0.2.0\build\MicroBuild.Core.props')" />
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -230,7 +231,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(SolutionDir)\..\NugetPackages\minhook.1.3.2.1\build\native\minhook.targets" Condition="Exists('$(SolutionDir)\..\NugetPackages\minhook.1.3.2.1\build\native\minhook.targets')" />
-    <Import Project="$(SolutionDir)\..\NugetPackages\MicroBuild.Core.0.1.1\build\MicroBuild.Core.targets" Condition="Exists('$(SolutionDir)\..\NugetPackages\MicroBuild.Core.0.1.1\build\MicroBuild.Core.targets')" />
+    <Import Project="$(SolutionDir)\..\NugetPackages\MicroBuild.Core.0.2.0\build\MicroBuild.Core.targets" Condition="Exists('$(SolutionDir)\..\NugetPackages\MicroBuild.Core.0.2.0\build\MicroBuild.Core.targets')" />
     <Import Project="$(SolutionDir)\..\NugetPackages\boost.1.60.0.0\build\native\boost.targets" Condition="Exists('$(SolutionDir)\..\NugetPackages\boost.1.60.0.0\build\native\boost.targets')" />
     <Import Project="$(SolutionDir)\..\NugetPackages\boost_date_time-vc140.1.60.0.0\build\native\boost_date_time-vc140.targets" Condition="Exists('$(SolutionDir)\..\NugetPackages\boost_date_time-vc140.1.60.0.0\build\native\boost_date_time-vc140.targets')" />
     <Import Project="$(SolutionDir)\..\NugetPackages\boost_locale-vc140.1.60.0.0\build\native\boost_locale-vc140.targets" Condition="Exists('$(SolutionDir)\..\NugetPackages\boost_locale-vc140.1.60.0.0\build\native\boost_locale-vc140.targets')" />
@@ -249,8 +250,8 @@
     <Error Condition="!Exists('$(SolutionDir)\..\NugetPackages\boost_program_options-vc140.1.60.0.0\build\native\boost_program_options-vc140.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\..\NugetPackages\boost_program_options-vc140.1.60.0.0\build\native\boost_program_options-vc140.targets'))" />
     <Error Condition="!Exists('$(SolutionDir)\..\NugetPackages\boost_regex-vc140.1.60.0.0\build\native\boost_regex-vc140.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\..\NugetPackages\boost_regex-vc140.1.60.0.0\build\native\boost_regex-vc140.targets'))" />
     <Error Condition="!Exists('$(SolutionDir)\..\NugetPackages\boost_system-vc140.1.60.0.0\build\native\boost_system-vc140.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\..\NugetPackages\boost_system-vc140.1.60.0.0\build\native\boost_system-vc140.targets'))" />
-    <Error Condition="!Exists('$(SolutionDir)\..\NugetPackages\MicroBuild.Core.0.1.1\build\MicroBuild.Core.props')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\..\NugetPackages\MicroBuild.Core.0.1.1\build\MicroBuild.Core.props'))" />
-    <Error Condition="!Exists('$(SolutionDir)\..\NugetPackages\MicroBuild.Core.0.1.1\build\MicroBuild.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\..\NugetPackages\MicroBuild.Core.0.1.1\build\MicroBuild.Core.targets'))" />
+    <Error Condition="!Exists('$(SolutionDir)\..\NugetPackages\MicroBuild.Core.0.2.0\build\MicroBuild.Core.props')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\..\NugetPackages\MicroBuild.Core.0.2.0\build\MicroBuild.Core.props'))" />
+    <Error Condition="!Exists('$(SolutionDir)\..\NugetPackages\MicroBuild.Core.0.2.0\build\MicroBuild.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\..\NugetPackages\MicroBuild.Core.0.2.0\build\MicroBuild.Core.targets'))" />
   </Target>
   <Import Project="$(SolutionDir)\R.Build.Version.targets" />
 </Project>
